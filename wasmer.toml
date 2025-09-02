@@ -1,12 +1,13 @@
+[package]
+name = "symfony-demo"
+version = "1.0.0"
+
 [dependencies]
-"php/php-eh" = "=8.3.404-beta.6"
+php = "8.2"
 
-[fs]
-"/app/" = "."
+[build]
+command = "composer install --no-dev --optimize-autoloader"
 
-[[command]]
-name = "run"
-module = "php/php-eh:php"
-runner = "wasi"
-[command.annotations.wasi]
-main-args = ["-t", "/app/public", "-S", "localhost:8080"]
+[run]
+command = "php -S 0.0.0.0:8000 -t public"
+
