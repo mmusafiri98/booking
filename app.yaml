@@ -1,0 +1,4 @@
+kind: wasmer.io/App.v0
+name: booking
+owner: tygamusafiri36
+package: .
